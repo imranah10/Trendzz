@@ -1,0 +1,583 @@
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    font-family: 'Chivo Mono', monospace;
+}
+:root{
+    --primary:rgb(143, 40, 40);
+    --secondary:rgba(15, 10, 29, 0.7);
+    --light:#2f3640;
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+/* nav start  */
+.nav1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 3px grey;
+    text-align: center;
+}
+
+.nav1 .left{
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+
+.nav1 .left a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0px 5px;
+}
+.nav1 .right{
+    flex-basis: 50%;
+
+}
+
+.nav1 .right i{
+    font-size: 20px;
+    margin: 0px 15px;
+    background-color: var(--primary);
+    padding: 8px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.nav1 .right i:hover{
+    transform: rotate(360deg);
+}
+
+/* nav 2 start  */
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.nav2 .nav2_left,.nav2 .nav2_center,.nav2 .nav2_right{
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+}
+.nav2 .nav2_left i{
+    margin-left: 8px;
+}
+.nav2 .nav2_center h1{
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+.nav2 .nav2_center p{
+    color: gray;
+    font-size: 15px;
+    margin-top: 5px;
+}
+.nav2 .nav2_right i{
+    margin: 0px 10px;
+}
+/* nav3 */
+.nav3{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+}
+.nav3 ul li{
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    z-index: 99;
+    /* margin: 0px 10px; */
+}
+.nav3 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: block;
+}
+.nav3 ul li a:hover{
+    color: var(--primary);
+}
+.nav3 ul li i{
+    color: var(--primary);
+    margin: 0px 5px;
+}
+.nav3 ul ul{
+    position: absolute;
+    top:70px;
+    left: 0;
+    display: none;
+}
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+.nav3 ul li:hover>ul{
+    display: block;
+}
+.featured{
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to right ,rgba(124, 115, 115, 0.938) 20%, rgba(255,255,255,0.8)) ,url('images/g1.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+.featuredtxt{
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    font-family: 'Roboto Mono', monospace;
+   
+}
+.featuredtxt button{
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    margin: 15px 0px;
+    font-size: 1.3rem;
+    background-color: var(--secondary);
+    color: white;
+    
+}
+
+/* latest product  */
+.latest{
+    margin: 50px 0px 0px;
+   padding: 50px 100px;
+    
+}
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+}
+.product-intro h1 span{
+    color: var(--secondary);
+}
+.latest p{
+    color: gray;
+    margin: 15px 0px;
+}
+
+
+/* card section  */
+.card-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+}
+.card-container .card{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.card i{
+    color: goldenrod;
+    margin-top: 10px 0;
+}
+
+.card button{
+    color: white;
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    margin-top: 8px;
+    padding: 5px 20px;
+    cursor: pointer;
+
+}
+.card:hover img{
+    width: 80%;
+    
+}
+.card:hover h1{
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+.card::before{
+    content: "20%off";
+    width: 25%;
+    height: 22px;
+    color: white;
+    background-color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-20deg);
+}
+
+.trends{
+    padding: 50px 100px;
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* slider  */
+.trends .swiper {
+    width: 70%;
+    padding: 50px;
+    
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    /* width:50%;
+    height: 40%;
+    background-color: red; */
+    
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 20%;
+    height: 50%;
+    margin: 10px auto;
+  }
+
+  /* footer  */
+  footer{
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem;
+  }
+  footer div{
+    flex-basis: 30%;
+  }
+  footer h1{
+    padding-top: 10px;
+    letter-spacing: 0.5rem;
+  }
+  footer h1 span{
+    color: var(--primary);
+  }
+
+  footer  p{
+    font-size: 1rem;
+    
+  }
+  footer i{
+    font-size: 1.2rem;
+    margin: 0px 5px;
+  }
+  footer >div:last-child{
+    padding-top: 42px;
+    color: white;
+  }
+
+  .sidenav{
+    display: none;
+  }
+  #menubar{
+    display: none;
+  }
+
+  /* making responsive */
+  /* 0px- 769px  */
+  @media  only screen and (max-width:769px) {
+    
+    .sidenav{
+        display: block;
+      }
+      #menubar{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right:0;
+        transform: translate(0%,-50%);
+        z-index: 99;
+        background-color: var(--primary);
+        color: white;
+        font-size: 2rem;
+        padding: 20px 10px;
+        animation: animate 5s ease infinite;
+
+      }
+
+      @keyframes animate {
+        0%{
+            background-color: var(--secondary);
+        }
+        100%{
+            background-color: var(--primary);
+        }
+      }
+
+    .nav1 .right i{
+        font-size: 15px;
+        margin: 0px 5px;
+       
+    }
+    .nav2{
+        width: 100%;
+        height: 100px;
+    }
+
+
+    .nav2 .nav2_left i{
+        margin-left: 0px;
+    }
+    .nav2 .nav2_center h1{
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    .nav2 .nav2_center p{
+        color: gray;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    .nav2 .nav2_right i{
+        margin: 0px 5px;
+    }
+    
+    .nav3{
+        display: none;
+    }
+    .featured{
+        background-attachment:fixed;
+    }
+
+
+    latest{
+        /* margin: 50px 0px 0px; */
+       padding: 0px 50px;
+        
+    }
+    .product-intro{
+        text-align: center;
+    }
+    .product-intro h1{
+        font-size: 2rem;
+        font-weight: bolder;
+        color: var(--primary);
+        letter-spacing: 0.2rem;
+    }
+    .product-intro h1 span{
+        color: var(--secondary);
+    }
+    .latest p{
+        color: gray;
+        margin: 15px 0px;
+    }
+    
+    
+    /* card section  */
+    .card-container{
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr);
+        gap: 1rem; */
+        margin: 2rem 0;
+    }
+    .card-container .card{
+        /* flex-basis: 100%; */
+        margin: 8px;
+        padding: 0.8rem;
+        position: relative;
+        text-align: center;
+    }
+    .card img{
+        width: 100%;
+        transition: 0.5s ease-in-out;
+    }
+    .card i{
+        color: goldenrod;
+        font-size: 0.7rem;
+        /* margin-top: 10px 0; */
+    }
+
+    .card::before{
+        content: "20%off";
+        width: 25%;
+        height: 22px;
+        
+    }
+    
+    .trends .swiper-slide {
+        width:380px;
+        height: 360px;
+      }
+    
+      .trends .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      footer div{
+        flex-basis: 50%;
+        margin: 10px 0px;
+      }
+
+      /* sidenav  */
+      .sidenav{
+        width: 0px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: var(--light);
+        padding-top: 70px;
+        display: block;
+        overflow: hidden;
+        transition: 0.5s  ease-in-out;
+        
+
+    }
+    .sidenav ul{
+        list-style: none;
+    }
+    .sidenav ul li{
+        display: block;
+        width: 200px;
+        position: relative;
+        z-index: 99;
+        margin: 10px 20px;
+    }
+    .sidenav ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        display: block;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .sidenav3 ul li a:hover{
+        color: var(--primary);
+    }
+    .sidenav ul li i{
+        color: var(--primary);
+        margin: 0px 5px;
+    }
+    .sidenav ul ul{
+        position: absolute;
+        top:70px;
+        left: 0;
+        display: none;
+    }
+    .nav3 ul ul li{
+        background-color: white;
+        border-bottom: 1px solid var(--primary);
+    }
+    .sidenav ul li:hover>ul{
+        display: block;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
